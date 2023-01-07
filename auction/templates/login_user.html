@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <title>Login</title>
+      <!-- Custom styles for this template-->
+      <link href="{% static 'css/style.css' %}" rel="stylesheet">
+      <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+      <link href="{% static 'css/register.css' %}" rel="stylesheet">
+
+      <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+      <!-- Custom fonts for this template-->
+      <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+      <link
+         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+         rel="stylesheet">
+   </head>
+   <body>
+         
+         <div class="container-login100"> 
+          
+            <div class="wrap-login100">
+               {% if messages %}
+                  <div class="alert alert-warning" role="alert">
+                     {% for message in messages %}
+                        {{ message }}
+                     {% endfor %}
+                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                {% endif %}
+               <form class="login100-form validate-form" method="post" action="">
+                  {% csrf_token %}
+                  <!-- <span class="login100-form-logo">
+                  <img src="" alt="account">
+                  </span> -->
+                  <span class="login100-form-title p-b-15 p-t-20" style="font-size: 40px;">
+                     <center>  Login  </center>
+                  </span>
+                  <div class="form-group">
+                     <input type="text" class="ele" placeholder="UserName" name="u_name" required=""><br><br>
+				         <input type="password" class="ele" placeholder="password" name="u_pwd" required="">
+                     <h5><a class="small" href="{% url 'forgot_password' %}"><br>&nbsp;&nbsp;&nbsp;&nbsp;FORGOT PASSWORD</a></h5>
+                  </div>
+                  <button class="btn btn-primary bztn-user btn-block" type="submit">Login</button>
+                  
+               </form>
+               <hr>
+               <div class="text-center">
+                  <h5>Don't have an account?</h5>
+                  <h5><a class="small" href="{% url 'register_user' %}">REGISTER</a></h5>
+               </div>
+            </div>
+         </div>
+         
+      <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+      <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+      <!-- Core plugin JavaScript-->
+      <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+      <!-- Custom scripts for all pages-->
+      <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+      <script>
+         window.setTimeout(function() {
+         $(".alert").fadeTo(500, 0).slideUp(500, function(){
+             $(this).remove(); 
+         });
+     }, 4000);
+     </script>
+   </body>
+</html>

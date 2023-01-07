@@ -1,0 +1,797 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Household Auction</title>
+    
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}"/>
+     <!-- Font Awesome for about section -->
+    <script src="https://kit.fontawesome.com/fc597d86b9.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    {% comment %} <div class="container-fluid">
+        <div class="row bg-secondary py-2 px-xl-5">
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-dark" href="{% url 'faq' %}">FAQs</a>
+                    <span class="text-muted px-2">|</span>
+                    <a class="text-dark" href="#hero"> About </a>
+                    <span class="text-muted px-2">|</span>
+                    <a class="text-dark" href="#services"> Services </a>
+                    <span class="text-muted px-2">|</span>
+                    <a class="text-dark" href="#why-us"> Work </a>
+                    <span class="text-muted px-2">|</span>
+                    <a class="text-dark" href="#contact"> Help & Contact </a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="nav-item nav-link" href="{% url 'login_user' %}">
+                        Login
+                    </a>
+                    <a class="nav-item nav-link" href="{% url 'register_user' %}">
+                        Register
+                    </a>
+                </div>
+            </div>
+        </div> {% endcomment %}
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <nav id="navbart" class="navbart">
+        <ul>
+          <li><a class="nav-link scrollto" href="#hero">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#why-us">Work</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Help &nbsp;&&nbsp; Contact</a></li>
+          <li><a href="{% url 'faq' %}">FAQ</a></li>
+          
+          <div class="col-lg-6 text-lg-right">
+            <div class="d-inline-flex">
+                <a class="nav-item nav-link" href="{% url 'login_user' %}" style = "position:relative; left:246px">
+                    Login
+                </a>
+                <a class="nav-item nav-link" href="{% url 'register_user' %}" style = "position:relative; left:260px">
+                    Register
+                </a>
+            </div>
+        </div>
+          
+        </ul>
+       
+      </nav><!-- .navbart -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+  <br><br>
+
+
+        <div class="row align-items-center py-3 px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a href="" class="text-decoration-none">
+                    <img style="width: 250px;height: 130px;" src="{% static 'img/logo2.png' %}" alt="Image">
+                </a>
+            </div>
+            <div class="col-lg-6 col-6 text-left"><br><br>
+                <form action="">
+                    <div class="input-group"> <br><br>
+                        <input type="text" class="form-control" placeholder="Search for anything">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-transparent text-primary">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3 col-6 text-right">
+                <a href="" class="btn border">
+                    <span class="badge" style="font-size: 40px;">SELL</span>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid mb-5">
+        <div class="row border-top px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100" data-toggle="collapse" href="#navbar-vertical" style="height: 65px; margin-top: -1px; padding: 0 30px;">
+                    <h6 class="m-0">Categories</h6>
+                    <i class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse show navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0" id="navbar-vertical">
+                    <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">Furniture <i class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="" class="dropdown-item">Sofa</a>
+                                <a href="" class="dropdown-item">Bed</a>
+                                <a href="" class="dropdown-item">Chair</a>
+                                <a href="" class="dropdown-item">Table</a>
+                                <a href="" class="dropdown-item">Dining Table</a>
+                                <a href="" class="dropdown-item">Wardrobe</a>
+                                <a href="" class="dropdown-item">TV cabinet</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">Electronics <i class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="" class="dropdown-item">Mobile Phones</a>
+                                <a href="" class="dropdown-item">Television</a>
+                                <a href="" class="dropdown-item">Refrigerator</a>
+                                <a href="" class="dropdown-item">Air Conditioner</a>
+                                <a href="" class="dropdown-item">Washing Machine</a>
+                                <a href="" class="dropdown-item">Laptop</a>
+                                
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">Vehicles <i class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="" class="dropdown-item">Scooty</a>
+                                <a href="" class="dropdown-item">Bike</a>
+                                <a href="" class="dropdown-item">Car</a>
+                            </div>
+                        </div>
+
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link" data-toggle="dropdown">Fashion <i class="fa fa-angle-down float-right mt-1"></i></a>
+                            <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
+                                <a href="" class="dropdown-item">Men <i class="fa fa-angle-down float-right mt-1"></i></a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link" data-toggle="dropdown">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shirt </a>
+                                    <a href="#" class="nav-link" data-toggle="dropdown">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jeans </a>
+                                </div>
+                                <a href="" class="dropdown-item">Women<i class="fa fa-angle-down float-right mt-1"></i></a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link" data-toggle="dropdown">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tops </a>
+                                    <a href="#" class="nav-link" data-toggle="dropdown">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jeans </a>
+                                    
+                                </div>
+             </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link">Summary</a>
+                            <a href="shop.html" class="nav-item nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Purchase History</a>
+                            <a href="detail.html" class="nav-item nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bids</a>
+                            <!-- <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="cart.html" class="dropdown-item">Shopping Cart</a>
+                                    <a href="checkout.html" class="dropdown-item">Checkout</a>
+                                </div>
+                            </div> -->
+                            <a href="contact.html" class="nav-item nav-link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selling</a>
+                        </div>
+                        
+                    </div>
+                </nav>
+                <div id="header-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="height: 410px;">
+                            <img class="img-fluid" src="{% static 'img/auction.jpg' %}" alt="Image">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h4 class="display-4 text-white font-weight-semi-bold mb-4">Browse, Bid, Win, Sell</h4><br><br>
+                                    <h3 class="text-light font-weight-small mb-0">Household Auction is where everyone goes to shop, sell,
+                                        and give, while discovering variety and affordability.</h3>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                            <span class="carousel-control-prev-icon mb-n2"></span>
+                        </div>
+                    </a>
+                    <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                            <span class="carousel-control-next-icon mb-n2"></span>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->     
+
+   <!-- ======= Hero Section ======= -->
+   <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background-image: url({% static 'img/auction2.jpg' %});">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">About our Company</h2>
+                <p class="animate__animated animate__fadeInUp">Household Auction makes it so easy to connect people to buy, sell or exchange used goods and services. The auction come in a variety of types, with different types of bidding and selling rules. <br>
+                    The buyers can choose the item to bid on and can bid while sitting anywhere, just with the help of internet. Buyers get an opportunity to compete with other potential buyers and can get attractive prices.<br>
+                    A seller can expand his reach by conducting an online auction, as over the web he can contact a large number of potential buyers together. A seller can get handsome returns by selecting the most appropriate bid for his item.
+                The most popular and active categories are that of Fashion, Electronic items, Household goods such as Furniture, and used Cars and Bikes.
+ 
+                </p>
+                <div>
+                  <a href="#services" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section><!-- End Hero -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services" style = "background-color: #EDF1FF;">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>Services</h2><br><br>
+            <p>We specialize in offering the best deals from trusted and certified vendors and merchants<br>We offer services like Easy Registeration, 100% Secure Bids, 24/7 Online Support, Free Access. <br>Unlike some online auctions, we don’t charge any additional fees for placing a bid or to take part in auction, we provide our clients with completely free access to all auctions. <br></p>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-6 icon-box">
+              <div class="icon" ><i class="fa fa-eye" aria-hidden="true"></i></div>
+              <h4 class="title">Quality Products</h4>
+              <p class="description">Household Auction features a wide variety of quality products at reasonable prices. We strive to make sure our customers are completely satisfied with their purchase.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 icon-box">
+              <div class="icon"><i class="fa fa-lock" aria-hidden="true"></i></div>
+              <h4 class="title">Secure Bids</h4>
+              <p class="description">We guarantee that every bid placed on our website is safe and secure. Authenticate legitimate users can buy the product online very efficiently and securely with the help of this system. Only authorized and verified customer can participate in auction.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 icon-box">
+              <div class="icon"><i class="fa fa-life-ring" aria-hidden="true"></i></div>
+              <h4 class="title">24/7 Support</h4>
+              <p class="description">We monitor each and every webcast auction of yours to ensure that auction day runs smoothly. Our auction support team is just a phone call away. Email support is available for auctioneers and their bidders wherever they need it.</p>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End Services Section -->
+
+      
+      <section id="why-us" class="why-us">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>How It Works</h2><br><br>
+            <p> Firstly you need to register in the website and by doing that you will get the access to take part in auctions. By bidding in any product you will get an instant report from our online auction system about your bidding status. The bidding will be completed after a time limit as decided. And then you can win the product in the Auction if it's your luck :)</p>
+          </div>
+  
+    <div class="row">
+            <div class="col-lg-4">
+              <div class="box" style="position:relative; left:80px">
+                <span>01</span> 
+                <div class="icon"><i class="fa fa-laptop" aria-hidden="true"></i></div>
+                <h4>Register</h4>
+                <p>To start using our auction, you’ll need to register. It’s completely free and requires just a few clicks!</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 mt-4 mt-lg-0">
+              <div class="box" style="position:relative; left:250px">
+                <span>02</span> 
+                <div class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+                <h4>Buy or Bid</h4>
+                <p>You can instantly buy or place a bid on any desired product right after registration on our website.</p>
+              </div>
+            </div>
+    </div>
+    <div class="row">
+            <div class="col-lg-4 mt-4 mt-lg-0">
+              <div class="box" style="position:relative; left:80px">
+                <span>03</span> 
+                <div class="icon"><i class="fa fa-gavel" aria-hidden="true"></i></div>
+                <h4> Submit a Bid</h4>
+                <p>Submitting a bid to our auction is quick and easy. The process takes approximately 5 minutes. </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mt-4 mt-lg-0">
+                <div class="box" style="position:relative; left:250px">
+                  <span>04</span> 
+                  <div class="icon"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+                  <h4> Win</h4>
+                  <p>Easily win at our auction and enjoy owning the product you dream of after the bidding is closed.</p>
+                </div>
+            </div>
+    </div>
+          
+  
+        </div>
+      </section><!-- End Why Us Section -->
+
+
+    <!-- Featured Start -->
+    <div class="container-fluid pt-5">
+        <div class="row px-xl-5 pb-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-users text-primary m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Happy Customer</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-pen text-primary m-0 mr-2"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Good Reviews</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                    <h1 class="fas fa-trophy text-primary m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Winner Customer</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-comments text-primary m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">New Comments</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Featured End -->
+
+
+    <!-- Categories Start -->
+    <!-- <div class="container-fluid pt-5">
+        <div class="row px-xl-5 pb-3">
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
+                    <p class="text-right">15 Products</p>
+                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
+                        <img class="img-fluid" src="img/cat-1.jpg" alt="">
+                    </a>
+                    <h5 class="font-weight-semi-bold m-0">Men's dresses</h5>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
+                    <p class="text-right">15 Products</p>
+                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
+                        <img class="img-fluid" src="img/cat-2.jpg" alt="">
+                    </a>
+                    <h5 class="font-weight-semi-bold m-0">Women's dresses</h5>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
+                    <p class="text-right">15 Products</p>
+                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
+                        <img class="img-fluid" src="img/cat-3.jpg" alt="">
+                    </a>
+                    <h5 class="font-weight-semi-bold m-0">Baby's dresses</h5>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
+                    <p class="text-right">15 Products</p>
+                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
+                        <img class="img-fluid" src="img/cat-4.jpg" alt="">
+                    </a>
+                    <h5 class="font-weight-semi-bold m-0">Accerssories</h5>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
+                    <p class="text-right">15 Products</p>
+                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
+                        <img class="img-fluid" src="img/cat-5.jpg" alt="">
+                    </a>
+                    <h5 class="font-weight-semi-bold m-0">Bags</h5>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
+                    <p class="text-right">15 Products</p>
+                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
+                        <img class="img-fluid" src="img/cat-6.jpg" alt="">
+                    </a>
+                    <h5 class="font-weight-semi-bold m-0">Shoes</h5>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Categories End -->
+
+
+    <!-- Offer Start -->
+    <!-- <div class="container-fluid offer pt-5">
+        <div class="row px-xl-5">
+            <div class="col-md-6 pb-4">
+                <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5">
+                    <img src="img/offer-1.png" alt="">
+                    <div class="position-relative" style="z-index: 1;">
+                        <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
+                        <h1 class="mb-4 font-weight-semi-bold">Spring Collection</h1>
+                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pb-4">
+                <div class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5">
+                    <img src="img/offer-2.png" alt="">
+                    <div class="position-relative" style="z-index: 1;">
+                        <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
+                        <h1 class="mb-4 font-weight-semi-bold">Winter Collection</h1>
+                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Offer End -->
+
+
+    <!-- Products Start -->
+    <div class="container-fluid pt-5">
+        <div class="text-center mb-4">
+            <h2 class="section-title px-5"><span class="px-2">Trending Auctions</span></h2>
+        </div>
+        <div class="row px-xl-5 pb-7">
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-7">
+                <div class="card product-item border-5 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-5">
+                        <img class="img-fluid w-100" src="{% static 'img/wardrobe.png' %}" alt="Image">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Wardrobe</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>Rs. 12000.00</h6><h6 class="text-muted ml-2"></h6>
+                                <!-- <del>$123.00</del> -->
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-hammer text-primary mr-1"></i>Place a Bid</a>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-7">
+                <div class="card product-item border-5 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-5">
+                        <img class="img-fluid w-100" src="{% static 'img/mobile.png' %}" alt="Image">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Oneplus Nord</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>Rs. 23000.00</h6><h6 class="text-muted ml-2"></h6>
+                                <!-- <del>$123.00</del> -->
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-hammer text-primary mr-1"></i>Place a Bid</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-7">
+                <div class="card product-item border-5 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-5">
+                        <img class="img-fluid w-100" src="{% static 'img/sofa.png' %}" alt="Image">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Sofa set</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>Rs. 30000.00</h6><h6 class="text-muted ml-2"></h6>
+                                <!-- <del>$123.00</del> -->
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-hammer text-primary mr-1"></i>Place a Bid</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-7">
+                <div class="card product-item border-5 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-5">
+                        <img class="img-fluid w-100" src="{% static 'img/fridge.png' %}" alt="Image">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Refrigerator</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>Rs. 80000.00</h6><h6 class="text-muted ml-2"></h6>
+                                <!-- <del>$123.00</del> -->
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-hammer text-primary mr-1"></i>Place a Bid</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-7">
+                <div class="card product-item border-5 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-5">
+                        <img class="img-fluid w-100" src="{% static 'img/scooty.png' %}" alt="Image">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">TVS scooty</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>Rs. 40000.00</h6><h6 class="text-muted ml-2"></h6>
+                                <!-- <del>$123.00</del> -->
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-hammer text-primary mr-1"></i>Place a Bid</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-7">
+                <div class="card product-item border-5 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-5">
+                        <img class="img-fluid w-100" src="{% static 'img/men-jeans.png' %}" alt="Image">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Men Jeans</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>Rs. 800.00</h6><h6 class="text-muted ml-2"></h6>
+                                <!-- <del>$123.00</del> -->
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-hammer text-primary mr-1"></i>Place a Bid</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-7">
+                <div class="card product-item border-5 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-5">
+                        <img class="img-fluid w-100" src="{% static 'img/car.png' %}" alt="Image">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Hyundai i10</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>Rs. 350000.00</h6><h6 class="text-muted ml-2"></h6>
+                                <!-- <del>$123.00</del> -->
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-hammer text-primary mr-1"></i>Place a Bid</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-7">
+                <div class="card product-item border-5 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-5">
+                        <img class="img-fluid w-100" src="{% static 'img/ladies-tshirt.png' %}" alt="Image">
+                    </div>
+                    <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                        <h6 class="text-truncate mb-3">Ladies Tshirt</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6>Rs. 300.00</h6><h6 class="text-muted ml-2"></h6>
+                                <!-- <del>$123.00</del> -->
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between bg-light border">
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                        <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-hammer text-primary mr-1"></i>Place a Bid</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Products End -->
+
+<!-- ======= Contact Section ======= -->
+ 
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg" style = "background-color: #EDF1FF;">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>Contact</h2>
+            <p>Contact Us</p>
+          </div>
+  
+          <div class="row">
+  
+            <div class="col-lg-6">
+  
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="info-box">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <h3>Our Address</h3>
+                    <p>A108 Adam Street, New York, NY 535022</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-box mt-4">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <h3>Email Us</h3>
+                    <p>auction2223@gmail.com</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-box mt-4">
+                    <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                    <h3>Call Us</h3>
+                    <p>+1 5589 55488 55</p>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+  
+            <div class="col-lg-6">
+              <form method="post" action={% url 'save_contact' %} role="form" class="php-email-form">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+  
+<!-- End Contact Section -->
+  
+
+
+    
+    <!-- Footer Start -->
+<div id="contact">
+    <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
+        <div class="row px-xl-5 pt-5">
+            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">                
+                <h1 class="mb-4 display-5 font-weight-semi-bold">We Accept:</h1>
+                <img class="img-fluid" src="{% static 'img/payments.png' %}" alt="">
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>All products</a>
+                            <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>My Account</a>
+                            {% comment %} 
+                            <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a> 
+                            <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a> 
+                            {% endcomment %}
+                            <a class="text-dark mb-2" href="#hero"><i class="fa fa-angle-right mr-2"></i>About</a>
+                            <a class="text-dark mb-2" href="#services"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                            <a class="text-dark mb-2" href="#why-us"><i class="fa fa-angle-right mr-2"></i>How It Works</a>
+                            <a class="text-dark mb-2" href="#contact"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="font-weight-bold text-dark mb-4">Help & FAQs</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Help center</a>
+                            <a class="text-dark mb-2" href="{% url 'faq' %}"><i class="fa fa-angle-right mr-2"></i>Customer FAQs</a>
+                            <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Terms and conditions</a>
+                            <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Report an item</a>
+                            <a class="text-dark mb-2" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Returns</a>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <a href="" class="text-decoration-none">
+                            <img style="width: 400px;height: 230px;position: absolute;left: -100px;" src="{% static 'img/logo2.png' %}" alt="Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row border-top border-light mx-xl-5 py-4">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-dark">
+                    &copy; <a class="text-dark font-weight-semi-bold">Copyright 2022</a> Household Auction | Designed
+                    by 
+                    <a class="text-dark font-weight-semi-bold">Group4</a><br>
+                    
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up">back to top</i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

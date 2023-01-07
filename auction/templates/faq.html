@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" charset="utf-8"></script>
+  <script src="https://kit.fontawesome.com/fc597d86b9.js" crossorigin="anonymous"></script>
+
+<style>
+
+  .container
+  {
+   width: 100%;
+   padding-right: 15px;
+   padding-left: 15px;
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 960px;
+  }
+  
+  section {
+      padding: 40px 0;
+      display: block;
+    }
+    
+  .section-bg {
+      background-color: #f1f1f1;
+    }
+    
+  .section-title {
+      text-align: center;
+      padding-bottom: 1px;
+    }
+  
+  .section-title h2 {
+      font-size: 34px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding-bottom: 0;
+      color: #d9766d;
+    }
+    
+    .section-title p {
+      margin-bottom: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  
+  .accordions {
+  width: 80%;
+  margin: 80px auto;
+  }
+  
+  .accordions h3 {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  }
+  
+  .accordion-item {
+  background-color: #f6e1df;
+  border-radius: 5px;
+  color: black;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  /* box-shadow: 0px 2px 10px #c2827d; */
+  }
+  
+  .accordion-item .accordion-title {
+  cursor: pointer;
+  padding: 16px;
+  transition: transform 0.4s ease-in-out;
+  }
+  
+  .accordion-item .accordion-title.active-title {
+  background-color: #d9766d;
+  color: #ffffff;
+  }
+  
+  .accordion-item .accordion-title h3 {
+  font-weight: 700;
+  margin: 0;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  }
+  
+  .accordion-item .accordion-title i.fa-chevron-down {
+  transform: rotate(0);
+  transition: 0.4s;
+  }
+  
+  .accordion-item .accordion-title i.fa-chevron-down.chevron-top {
+  transform: rotate(-180deg);
+  color: #ffffff;
+  }
+  
+  .accordion-item .accordion-content {
+  display: none;
+  line-height: 1.7;
+  color: #100e34;
+  padding: 20px;
+  background-color: #EDF1FF;
+  border-radius: 0 0 5px 5px;
+  }
+  
+  .accordion-item .accordion-content.active {
+  display: block;
+  }
+  
+  .accordion-item .accordion-content p {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  }
+  
+</style>
+
+</head>
+<body>
+
+   <section id="faq" class="faq section-bg" style = "background-color: #EDF1FF;">
+
+      <div class="container">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>Below page contains a list of commonly asked questions and answers about different topics related to Auction...</p>
+          </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="accordions">
+
+              <!-- 1st accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item1">
+                  <h3><i class="fa fa-question-circle-o icon-help"></i>What is Household Auction? <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item1">
+                  <p>Household Auction is a destination for buying and selling used goods via an online platform.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 2nd accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item2">
+                  <h3><i class="fa fa-question-circle-o icon-help"></i>Who is Bidder? <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item2">
+                  <p>
+                    Anyone be a Company or an individual wishing to bid or participate in an online Auction event is a Bidder.In e-Auction bidder can register as:1)Company- by providing CIN number.2)Individual-By Providing PAN card detailsBy responding in an Auction, the Bidder commits to buy or sell items at prices submitted by him during Auction. 
+                  </p>
+                </div>
+              </div>
+
+              <!-- 3rd accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item3">
+                  <h3><i class="fa fa-question-circle-o icon-help"></i>Are Auction Event Private Or Public?
+                    <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item3">
+                  <p>
+                    Each Auction is a highly confidential event conducted between the Auctioneer and a set of qualified Bidders on Auction platform. No outsider can view any aspect of an Auction event without proper authentication by Auctioneer.Therefore all data like Items' specifications, pricing, Bidders' information and bid data are all confidential and available to respective Auctioneers only
+                  </p>
+                </div>
+              </div>
+
+              <!-- 4th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item4">
+                  <h3><i class="fa fa-question-circle-o icon-help"></i>How Can Bidder Register in Auction portal? <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item4">
+                  <p>
+                    To participate as a Bidder, Registration is a simple process.Go to registration form from Home page. Select "Register as Individual or Company" and fill out all required details. Go through User Agreement & Privacy Policy and click on the 'Register' button. It is a simple registration form with minimum details for identification and security. Go ahead, take a look and register.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 5th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item5">
+                  <h3><i class="fa fa-question-circle-o icon-help"></i>&nbsp;Can an individual who is not a registered company or an organization, register as a Bidder?
+                    <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item5">
+                  <p>
+Yes, an Individual can register as a Bidder Auction platform. While registering, please select "Individual" in Bidder Details Field.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 6th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item6">
+                  <h3><i class="fa fa-question-circle-o icon-help"></i>Forgotten user name and / or password: How to retrieve the same?
+                    <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item6">
+                  <p>
+                    Click on "Forgot Password" link provided on Login page. You will be required to provide your registered email id and your login credentials will be mailed.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 7th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item7">
+                  <h3><i class="fa fa-question-circle-o icon-help"></i>How can I bid at an auction property?
+                    <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item7">
+                  <p>
+                    After successfully submitting the required documents and paying the Earnest Money Deposit (EMD) amount, make a note of the auction date provided on the e-auction site. Then, on the given date visit the site and place your bid starting at the Reserve Price. You can raise your bids incrementally based on the specified ‘Bid Increment Value’ as many times as you chose.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 8th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item8">
+                  <h3><i class="fa fa-question-circle-o icon-help"></i>How to search for a property?
+                    <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item8">
+                  <p>
+                    On Household Auction, users can search for a property by the city it is located in or by the category. Enter your query in the Search Box provided on the home page or if you wish to access a specific auction then, you could do an Advance Search. The Advance Search allows you to search by either selecting a date range or by entering the minimum or maximum price and the Borrower or Company name.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- JavaScript-->
+  
+    <script>
+       $(document).ready(function () {
+    $(".accordion-title").click(function (e) {
+      var accordionitem = $(this).attr("data-tab");
+      $("#" + accordionitem)
+        .slideToggle()
+        .parent()
+        .siblings()
+        .find(".accordion-content")
+        .slideUp();
+
+      $(this).toggleClass("active-title");
+      $("#" + accordionitem)
+        .parent()
+        .siblings()
+        .find(".accordion-title")
+        .removeClass("active-title");
+
+      $("i.fa-chevron-down", this).toggleClass("chevron-top");
+      $("#" + accordionitem)
+        .parent()
+        .siblings()
+        .find(".accordion-title i.fa-chevron-down")
+        .removeClass("chevron-top");
+    });
+  });
+
+
+    </script>  
+  
+</body>
+</html>
+

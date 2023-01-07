@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width,
+						initial-scale=1.0">
+	<title>Registration</title>
+  <link href="{% static 'css/register.css' %}" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<h1 class="heading">HOUSEHOLD AUCTION</h1>
+		<h3 class="title">Create an Account</h3>
+	</header>
+
+	<!-- container div -->
+	<div class="container">
+
+		<!-- upper button section to select
+			the login or signup form -->
+		<div class="slider"></div>
+		<div class="btn">
+			<button class="login"><pre>Personal account</pre></button>
+			<button class="signup"><pre>Business account</pre></button>
+		</div>
+
+		<!-- Form section that contains the
+			login and the signup form -->
+		<div class="form-section">
+
+			<!-- user -->
+		<form method="POST" action="register">
+			{% csrf_token %}
+			<div class="login-box">
+				
+				<input type="text" class="ele" placeholder="Ful Name" name = "first_name" required=""> 
+				<input type="email" class="ele" placeholder="Email" name = "email" required="">
+				<input type="text" class="ele" placeholder="UserName" name = "username" required="">
+				<input type="password" class="ele" placeholder="Password" name = "password" required="">
+				<input type="password" class="ele" placeholder="Confirm password" name = "password2" required="">
+				<p>
+					{% for message in messages %}
+					<p style="font-size: 14px; color:red; font-weight: bolder; margin-bottom: 5%; margin-right: 55%;"> {{message}} !!</p> 
+					{% endfor %}
+				</p>
+				
+				{% comment %} <p>Upload your Aadhar Card below!</p>
+				<input type="file" name="filename" required=""> {% endcomment %}
+				
+				<button class="clkbtn" type="submit">Register</button>
+			</div>
+		</form>
+
+			<!-- seller -->
+		<form method="POST" action="">
+			{% csrf_token %}
+			<div class="signup-box">
+				<input type="text" class="ele" placeholder="Business Name" name = "s_name" required="">
+				<input type="email" class="ele" placeholder="Business Email" name = "s_email" required="">
+				<input type="text" class="ele" placeholder="UserName" name = "s_uname" required="">
+				<input type="password" class="ele" placeholder="Password" name = "s_pwd1" required="">
+				<input type="password" class="ele" placeholder="Confirm password" name = "s_pwd2" required="">
+				{% comment %} <p>Upload your Aadhar Card below!</p>
+				<input type="file" name="filename" required=""> {% endcomment %}
+				<button class="clkbtn" type="submit">Register</button>
+			</div>
+		</form>
+		</div>
+	</div>
+	<script src="{% static 'js/register.js' %}"></script>
+</body>
+
+</html>
